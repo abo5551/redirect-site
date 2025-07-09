@@ -9,36 +9,47 @@
     }
     body {
       margin: 0;
-      background: rgba(0, 0, 0, 0.9);
+      background: rgba(0, 0, 0, 0.92);
       color: white;
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
       flex-direction: column;
+      overflow: hidden;
     }
-    .box {
-      background: #1c1c1c;
-      padding: 40px;
+
+    .screen-box {
+      background: #111;
+      padding: 50px;
       border-radius: 20px;
-      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
       text-align: center;
+      animation: fadeIn 1s ease-in-out;
     }
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
+
+    .screen-box h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #00ffff;
     }
-    p {
+
+    .screen-box p {
       font-size: 1.2em;
       color: #ccc;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>مرحبًا بك في الشاشة!</h1>
-    <p>هذه واجهة تُحاكي شاشة داخل اللعبة</p>
+  <div class="screen-box">
+    <h1>واجهة داخل اللعبة</h1>
+    <p>مرحبًا بك! هذه شاشة HTML تُشبه شاشة الألعاب</p>
   </div>
 </body>
 </html>
